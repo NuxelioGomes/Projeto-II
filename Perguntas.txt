@@ -1,0 +1,13 @@
+1) caso tenhamos uma extensão tripla para este projeto quantos reles vamos precisar?
+
+	Depende da funcionalidade que você deseja implementar com a extensão tripla. Se a extensão tripla for usada apenas para fornecer energia elétrica aos dispositivos, não seria necessário nenhum relé adicional. Porém, se você quiser controlar remotamente os dispositivos conectados à extensão tripla, seria necessário um relé adicional para cada dispositivo que você deseja controlar. Por exemplo, se você quiser controlar três dispositivos diferentes, você precisaria de três relés adicionais.
+
+
+
+2) como é feita a ligaçao dos reles a cada entrada da extensão tripla
+
+	Para conectar o relé, o cabo de fase de cada entrada da extensão tripla deve ser cortado e os extremos do cabo devem ser conectados aos terminais COM (comum) e NO (normalmente aberto) do relé. O cabo neutro de cada entrada da extensão tripla deve ser conectado diretamente ao cabo neutro da tomada.
+
+
+3) como se faz a converçao a tensão de 230V AC da rede elétrica para uma tensão de 5V DC
+(Ver resposta)
