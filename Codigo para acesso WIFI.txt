@@ -1,0 +1,45 @@
+Exemplo 1 - Conexão à rede Wi-Fi local:
+
+#include <WiFi.h>
+
+const char* ssid = "NOME_DA_REDE";
+const char* password = "SENHA_DA_REDE";
+
+void setup() {
+  Serial.begin(115200);
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Connecting to WiFi...");
+  }
+  Serial.println("Connected to WiFi");
+}
+
+void loop() {
+  // código aqui
+}
+
+
+
+Exemplo 2 - Conexão à rede Wi-Fi do próprio ESP32 como ponto de acesso:
+
+#include <WiFi.h>
+
+const char* ssid = "ESP32_WIFI";
+const char* password = "ESP32_WIFI_PASSWORD";
+
+void setup() {
+  Serial.begin(115200);
+  WiFi.softAP(ssid, password);
+  Serial.println("Wi-Fi Access Point started");
+  Serial.print("SSID: ");
+  Serial.println(ssid);
+  Serial.print("Password: ");
+  Serial.println(password);
+  Serial.print("IP address: ");
+  Serial.println(WiFi.softAPIP());
+}
+
+void loop() {
+  // código aqui
+}
