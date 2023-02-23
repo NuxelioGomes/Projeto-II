@@ -1,0 +1,4 @@
+https://lastminuteengineers.com/oled-display-esp32-tutorial/
+
+Ha OLED com 7 pinos, 4 pinos
+Encontrei a ligação e explicação para um de 4 pinos
