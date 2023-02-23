@@ -1,0 +1,2 @@
+1) Potenciometro -- https://www.youtube.com/watch?v=E5k_77qljDU
+2) https://lobodarobotica.com/blog/esp32-pinout/
