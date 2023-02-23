@@ -1,4 +1,6 @@
-https://lastminuteengineers.com/oled-display-esp32-tutorial/
+1) https://lastminuteengineers.com/oled-display-esp32-tutorial/
+2) https://randomnerdtutorials.com/esp32-ssd1306-oled-display-arduino-ide/ (***)
 
 Ha OLED com 7 pinos, 4 pinos
 Encontrei a ligação e explicação para um de 4 pinos
+
