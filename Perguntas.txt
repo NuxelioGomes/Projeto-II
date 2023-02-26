@@ -11,3 +11,7 @@
 
 3) como se faz a converçao a tensão de 230V AC da rede elétrica para uma tensão de 5V DC
 (Ver resposta)
+
+
+
+4) Podemos ligar o sensor de tensao em serie com o sensor de corrente? Como funciona essa ligação?
