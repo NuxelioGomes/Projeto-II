@@ -5,3 +5,7 @@ https://github.com/genilto/home-sweet-home
 Ligação ficha tripla
 https://www.youtube.com/watch?v=Sxdl43oTEig
 
+
+Ligação a um IP com o ESP32(para mostrar os valores de corrente e tensão)
+https://www.youtube.com/watch?v=WiNiXOo2rvw
+https://www.youtube.com/watch?v=ZSyqNFGAF8o
