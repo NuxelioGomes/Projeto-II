@@ -1,0 +1,28 @@
+1 - (pergunta ao chatgpt)temos um sensor de temperatura tmp36 e um esp32, da me um codigo onde se le o valor da temperatura e diz como e feita a ligação fisica
+
+// Define o pino analógico A0 como entrada
+const int pin = A0;
+
+void setup() {
+  // Inicializa a comunicação serial
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Lê a tensão no pino A0
+  int sensorValue = analogRead(pin);
+
+  // Converte a tensão em graus Celsius
+  float celsius = (sensorValue * 3.3) / 1024 * 100 - 50;
+
+  // Imprime o valor da temperatura no monitor serial
+  Serial.print("Temperatura: ");
+  Serial.print(celsius);
+  Serial.println(" C");
+
+  // Aguarda 1 segundo
+  delay(1000);
+}
+
+EXPLICAÇÃO - Para fazer a leitura do valor de temperatura do sensor TMP36 com o ESP32, você precisará conectá-lo aos pinos corretos do microcontrolador. O pino central do sensor deve ser conectado ao pino analógico A0 do ESP32, o pino da esquerda deve ser conectado ao GND e o pino da direita deve ser conectado à fonte de alimentação de 3.3V. 
+Este código utiliza a função analogRead() para ler o valor da tensão no pino A0, que é proporcional à temperatura medida pelo sensor. Em seguida, a tensão é convertida em graus Celsius usando uma fórmula simples. O valor da temperatura é então impresso no monitor serial usando a função Serial.print(). Note que a função delay() é usada para aguardar 1 segundo antes de fazer uma nova leitura.
