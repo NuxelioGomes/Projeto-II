@@ -1,0 +1,46 @@
+const float tensao = 220.0;  // Volts
+float corrente = 0.0;        // Ampères
+float tempo = 0.0;           // Segundos
+float consumo = 0.0;         // kWh
+unsigned long tempo_inicial = 0;  // Tempo em milissegundos
+
+void setup() {
+  Serial.begin(9600);
+  // Inicializa a variável de tempo inicial
+  tempo_inicial = millis();
+}
+
+void loop() {
+  // Lê a corrente do sensor de corrente
+  corrente = lerCorrente();
+  
+  // Calcula o tempo decorrido desde o início do programa
+  tempo = (millis() - tempo_inicial) / 1000.0;  // Em segundos
+  
+  // Calcula o consumo de energia em kWh
+  consumo = (tensao * corrente * tempo) / 1000.0 / 3600.0;
+  
+  // Imprime o consumo de energia
+  Serial.print("Consumo: ");
+  Serial.print(consumo, 2);  // Arredonda para duas casas decimais
+  Serial.println(" kWh");
+  
+  delay(1000);  // Aguarda 1 segundo antes da próxima leitura
+}
+
+float lerCorrente() {
+  // Lê a corrente do sensor de corrente e converte para ampères
+  float valor_lido = analogRead(A0);
+  float tensao_lida = (valor_lido / 1023.0) * 3.3;  // Tensão em volts
+  float corrente_lida = (tensao_lida - 1.65) / 0.066;  // Corrente em ampères
+  
+  return corrente_lida;
+}
+
+
+
+tempo = (millis() - tempo_inicial) / 1000.0;  // Em segundos
+Potencia = potencia1 + potencia2 + potencia3
+consumo = (potencia * tempo) / 1000.0 / 3600.0;
+preco = consumo em kWh x valor da tarifa em euros por kWh
+
